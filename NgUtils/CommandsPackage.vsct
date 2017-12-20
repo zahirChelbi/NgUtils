@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  
+    
+  <Commands package="guidCommandsPackage">
+    <Menus>
+      <Menu guid="guidNgUtils" id="myExtensionSubMenu" priority="0x0000" type="Menu">
+        <Parent guid="guidNgUtils" id="mainItemMenuGroup"/>
+        <Strings>
+          <ButtonText>Angular Utils</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+    <Groups>
+      <!-- Define the mainItemMenuGroup, child of the item menu -->
+      <Group guid="guidNgUtils" id="mainItemMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE"/>
+      </Group>
+      <!-- Define the myExtensionSubMenuGroup, child of the myExtensionSubMenu -->
+      <Group guid="guidNgUtils" id="myExtensionSubMenuGroup" priority="0x0600">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenu"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidNgUtils" id="CommandsId" priority="0x0100" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>NgComponent</ButtonText></Strings>
+      </Button>
+      <Button guid="guidNgUtils" id="CommandsId1" priority="0x0200" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>NgService</ButtonText></Strings>
+      </Button>
+      <Button guid="guidNgUtils" id="CommandsId2" priority="0x0300" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>NgPipe</ButtonText></Strings>
+      </Button>
+    
+     <Button guid="guidNgUtils" id="CommandsId3" priority="0x0350" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>NgDirective</ButtonText></Strings>
+      </Button>
+      <Button guid="guidNgUtils" id="CommandsId4" priority="0x0360" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroup" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>NgModule</ButtonText></Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\ss.png" usedList="bmpPic1"/>
+    </Bitmaps>
+    
+  </Commands>
+
+  <Commands package="guidCommandsPackage">
+    <Menus>
+      <Menu guid="guidNgUtils" id="myExtensionSubMenuP" priority="0x0000" type="Menu">
+        <Parent guid="guidNgUtils" id="mainItemMenuGroupP"/>
+        <Strings>
+          <ButtonText>Angular Projet</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>  
+    <Groups>
+      <Group guid="guidNgUtils" id="mainItemMenuGroupP" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidNgUtils" id="myExtensionSubMenuGroupP" priority="0x0600">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuP"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidNgUtils" id="CommandsIdPC" priority="0x0400" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroupP" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>Ajouter un Projet Angular-cli</ButtonText></Strings>
+      </Button>
+      <Button guid="guidNgUtils" id="CommandsIdP" priority="0x0500" type="Button">
+        <Parent guid="guidNgUtils" id="myExtensionSubMenuGroupP" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings><ButtonText>Ajouter un Projet Angular-webpack</ButtonText></Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\ss.png" usedList="bmpPic1"/>
+    </Bitmaps>
+
+  </Commands>
+
+  
+    
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidCommandsPackage" value="{549e5971-5b77-485b-9d96-0ac42f399410}" />
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidNgUtils" value="{9865f3c9-4e8f-474b-a2ff-70bcfd17d663}">
+      
+      <IDSymbol name="mainItemMenuGroup" value="0x1020" />
+      <IDSymbol name="myExtensionSubMenu" value="0x2020"/>
+      <IDSymbol name="myExtensionSubMenuGroup" value="0x1021" />
+      <IDSymbol name="CommandsId" value="0x0100" />
+      <IDSymbol name="CommandsId1" value="0x0200" />
+      <IDSymbol name="CommandsId2" value="0x0300" />
+      <IDSymbol name="CommandsId3" value="0x0350" />
+      <IDSymbol name="CommandsId4" value="0x0360" />
+
+      <IDSymbol name="mainItemMenuGroupP" value="0x1030" />
+      <IDSymbol name="myExtensionSubMenuP" value="0x2030"/>
+      <IDSymbol name="myExtensionSubMenuGroupP" value="0x1031" />
+      <IDSymbol name="CommandsIdPC" value="0x0400" />
+      <IDSymbol name="CommandsIdP" value="0x0500" />
+    </GuidSymbol>
+
+
+    <GuidSymbol name="guidImages" value="{3e1d5145-83b5-4b80-9728-88503504beb4}" >
+      <IDSymbol name="bmpPic1" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
